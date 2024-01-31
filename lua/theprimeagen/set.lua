@@ -32,3 +32,4 @@ vim.opt.colorcolumn = "80"
 vim.opt.foldmethod="expr"
 vim.opt.foldexpr="nvim_treesitter#foldexpr()"
 vim.opt.foldlevel=20
+vim.opt.timeoutlen = 500
