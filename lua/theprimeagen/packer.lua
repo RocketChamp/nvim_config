@@ -13,16 +13,6 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    use 'morhetz/gruvbox'
-    use 'mfussenegger/nvim-dap'
-    use { "mxsdev/nvim-dap-vscode-js", requires = {"mfussenegger/nvim-dap"} }
-
-    use {
-        "microsoft/vscode-js-debug",
-        opt = true,
-        run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
-    }
-    use 'airblade/vim-gitgutter'
     use({
         'rose-pine/neovim',
         as = 'rose-pine',
@@ -83,6 +73,19 @@ return require('packer').startup(function(use)
         use("github/copilot.vim")
         use("eandrju/cellular-automaton.nvim")
         use("laytan/cloak.nvim")
+
+        use 'morhetz/gruvbox'
+        use 'mfussenegger/nvim-dap'
+        use { "mxsdev/nvim-dap-vscode-js", requires = {"mfussenegger/nvim-dap"} }
+
+        use {
+            "microsoft/vscode-js-debug",
+            opt = true,
+            run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
+        }
+        use 'airblade/vim-gitgutter'
+        use 'ThePrimeagen/vim-be-good'
+        use 'vim-airline/vim-airline'
 
     end)
 
